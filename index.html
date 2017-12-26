@@ -34,9 +34,9 @@
 	<p>Тут можно найти текстуры <br> по всей предлагаемой нами продукции </p>
 			</div>
 		</div>
-		<a href="#" class="main-down"><i class="icon-down"></i></a>
+		<a href="#portfolio" class="main-down slowly"><i class="icon-down"></i></a>
 	</div>
-<div class="portfolio">
+<div class="portfolio" id="portfolio">
 <div class="container">
 <h2 class="section-portfolio">Фабрики</h2>
 <div class="row">
@@ -111,5 +111,16 @@
     		});
     	});
     </script>
+	
+	<script>
+	$(document).ready(function(){
+	$(".slowly").on("click", function (event){
+	event.preventDefault();
+	var id = $(this).attr('href'),
+	top = $(id).offset().top;
+	$('body,html').animate({scrollTop: top},600);
+	});
+	});
+	</script>
   </body>
 </html>
